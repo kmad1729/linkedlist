@@ -1,0 +1,3 @@
+to compile, use:
+
+ gcc -g ll_func.c ll_test.c -o ll_test
