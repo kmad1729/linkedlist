@@ -47,7 +47,7 @@ void DeleteList(node_t **headRef)
     node_t *node_to_free = NULL;
     while(*headRef != NULL) {
         node_to_free = *headRef;
-        *headRef = (*headRef -> next);
+        *headRef = ((*headRef) -> next);
         free(node_to_free);
     }
 }

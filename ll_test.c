@@ -14,7 +14,7 @@ void Print_ll(node_t *head)
 node_t *GenerateRandomList(int count, unsigned int range)
 {
     
-    node_t *head;
+    node_t *head = NULL;
     for(int i = 0; i < count; i++) {
         Push(&head, rand() % range);
     }
@@ -39,7 +39,9 @@ int main()
     printf("list[%d] = %d\n", index, GetNth(rand_list, index));
 
     printf("\n\n FREEING the LIST!!\n");
-    DeleteList(rand_list);
+
+    DeleteList(&n);
+    DeleteList(&rand_list);
     return 0;
 }
 
