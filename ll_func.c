@@ -47,7 +47,7 @@ void DeleteList(node_t **headRef)
     node_t *node_to_free = NULL;
     while(*headRef != NULL) {
         node_to_free = *headRef;
-        *headRef = (*headRef -> next);
+        *headRef = ((*headRef) -> next);
         free(node_to_free);
     }
 }
@@ -62,3 +62,25 @@ int Length(node_t *head)
     return res;
 }
 
+void DeleteNode(node_t **headRef, int data) {
+   node_t *prev = NULL;
+   node_t *tmp = NULL;
+   node_t *curr = *headRef;
+
+   while(curr != NULL) {
+       if ((curr -> data)  == data) {
+            if(prev == NULL) {
+                *headRef = (curr -> next);
+            } else {
+                (prev -> next) = (curr -> next);
+            }
+            prev = curr;
+            tmp = curr;
+            free(tmp);
+            curr = (prev -> next);
+       } else {
+            prev = curr;
+            curr = (curr -> next);
+       }
+   }
+}

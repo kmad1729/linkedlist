@@ -33,13 +33,17 @@ int main()
     node_t *rand_list = GenerateRandomList(c, range);
     Print_ll(rand_list);
     printf("count of list = %d\n", c);
-    int searchFor = 7;
+    int searchFor = 12;
     printf("number of %ds in the list = %d\n", searchFor, Count(rand_list, searchFor));
     int index = 9;
     printf("list[%d] = %d\n", index, GetNth(rand_list, index));
 
+    printf("deleting node %d\n", searchFor);
+    DeleteNode(&rand_list, searchFor);
+    printf("new_list : \n");    
+    Print_ll(rand_list);
     printf("\n\n FREEING the LIST!!\n");
-    DeleteList(rand_list);
+    DeleteList(&rand_list);
     return 0;
 }
 

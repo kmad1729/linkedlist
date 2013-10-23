@@ -15,5 +15,6 @@ int Length(node_t *head);
 int Count(node_t *head, int searchFor);
 int GetNth(node_t *head, int index);
 void DeleteList(node_t **headRef);
+void DeleteNode(node_t **headRef, int data);
 #endif
 
