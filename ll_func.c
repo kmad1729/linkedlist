@@ -76,8 +76,8 @@ void DeleteNode(node_t **headRef, int data) {
             }
             prev = curr;
             tmp = curr;
-            free(tmp);
             curr = (prev -> next);
+            free(tmp);
        } else {
             prev = curr;
             curr = (curr -> next);

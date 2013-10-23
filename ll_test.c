@@ -43,11 +43,8 @@ int main()
     printf("new_list : \n");    
     Print_ll(rand_list);
     printf("\n\n FREEING the LIST!!\n");
-<<<<<<< HEAD
-=======
 
     DeleteList(&n);
->>>>>>> 8de96123c0d547c3404badbab1e4aa99b6284fc8
     DeleteList(&rand_list);
     return 0;
 }
