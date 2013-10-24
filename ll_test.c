@@ -33,7 +33,7 @@ int main()
     node_t *rand_list = GenerateRandomList(c, range);
     Print_ll(rand_list);
     printf("count of list = %d\n", c);
-    int searchFor = 12;
+    int searchFor = 3;
     printf("number of %ds in the list = %d\n", searchFor, Count(rand_list, searchFor));
     int index = 9;
     printf("list[%d] = %d\n", index, GetNth(rand_list, index));
@@ -42,8 +42,17 @@ int main()
     DeleteNode(&rand_list, searchFor);
     printf("new_list : \n");    
     Print_ll(rand_list);
-    printf("\n\n FREEING the LIST!!\n");
+    
+    node_t *constantList = NULL;
+    int constant = 8;
+    for(int i=0; i < 6; i++) {Push(&constantList, constant);}
+    printf("constnat list = ");
+    Print_ll(constantList);
+    DeleteNode(&constantList, constant);
+    printf("constnat list after deletion= ");
+    Print_ll(constantList);
 
+    printf("\n\n FREEING the LIST!!\n");
     DeleteList(&n);
     DeleteList(&rand_list);
     return 0;
